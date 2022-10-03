@@ -1,8 +1,9 @@
-import { ObjectId } from 'mongoose';
+import { Form } from './form';
+import { AnswerType } from './answer-type';
 
 export interface Question {
-  formId: ObjectId;
+  form: Form;
   caption: string;
-  answerType: ObjectId;
+  answerType: AnswerType;
   options: Array<string>;
 }

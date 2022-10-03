@@ -1,11 +1,12 @@
-import { ObjectId } from 'mongoose';
+import { Question } from './question';
+import { Form } from './form';
 
 interface Answer {
-  questionId: ObjectId;
+  question: Question;
   value: Array<string>;
 }
 
 export interface FormResponse {
-  formId: ObjectId;
+  form: Form;
   answer: Array<Answer>;
 }
