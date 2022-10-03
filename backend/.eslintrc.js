@@ -1,0 +1,76 @@
+module.exports = {
+  root: true,
+  env: {
+    browser: false,
+    node: true,
+    es2021: true,
+    'jest/globals': true,
+  },
+  extends: ['airbnb-base', 'plugin:prettier/recommended', 'plugin:import/typescript'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint', 'jest'],
+  rules: {
+    'import/prefer-default-export': 'off',
+    'prefer-destructuring': [
+      'error',
+      {
+        array: false,
+        object: true,
+      },
+      {
+        enforceForRenamedProperties: false,
+      },
+    ],
+    'object-curly-newline': 'off',
+    indent: 'off',
+    'arrow-parens': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'function-paren-newline': 'off',
+    'consistent-return': [
+      'error',
+      {
+        treatUndefinedAsUnspecified: true,
+      },
+    ],
+    'generator-star-spacing': 'off',
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'no-mixed-operators': 0,
+    'no-underscore-dangle': 'off',
+    'no-unused-expressions': 0,
+    'max-len': [
+      'error',
+      {
+        tabWidth: 2,
+        code: 120,
+        ignoreUrls: true,
+      },
+    ],
+    'prettier/prettier': [
+      'warn',
+      {
+        bracketSpacing: true,
+        printWidth: 120,
+        semi: true,
+        singleQuote: true,
+        tabWidth: 2,
+        trailingComma: 'all',
+        useTabs: false,
+        arrowParens: 'avoid',
+      },
+    ],
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
+    'jest/no-disabled-tests': 'error',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
+    'jest/prefer-to-have-length': 'warn',
+    'jest/valid-expect': 'error',
+  },
+};
