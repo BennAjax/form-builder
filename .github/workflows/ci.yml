@@ -1,0 +1,17 @@
+name: form-builder-ci
+
+on:
+  push:
+    branches: ['main']
+
+env:
+  JWT_SECRET: xxxxxx
+  PORT: 4000
+  MONGODB_URI: mongodb://mongo_db:27017
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd backend && npm install && npm test
