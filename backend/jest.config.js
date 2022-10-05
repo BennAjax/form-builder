@@ -11,7 +11,7 @@ module.exports = {
   testEnvironment: '<rootDir>/src/__tests__/base-environment.ts',
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: ['/node_modules/', '/src/__tests__/', '/src/form/__tests__/'],
+  testPathIgnorePatterns: ['/node_modules/', '/src/__tests__/', '/src/form/__tests__/', '/src/user/__tests__/'],
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
   setupFiles: ['dotenv/config'],

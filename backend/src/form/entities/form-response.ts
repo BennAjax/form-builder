@@ -1,12 +1,12 @@
 import { Question } from './question';
 import { Form } from './form';
 
-interface Answer {
-  question: Question;
+export interface Answer {
+  questionId: Question;
   value: Array<string>;
 }
 
 export interface FormResponse {
-  form: Form;
-  answer: Array<Answer>;
+  formId: Form;
+  answers: Array<Answer>;
 }

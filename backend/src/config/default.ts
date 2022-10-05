@@ -6,7 +6,7 @@ const config = {
   mongodb: {
     dsn: process.env.MONGODB_URI as string,
     options: {
-      dbName: 'Form-Builder',
+      dbName: 'form-builder',
       useNewUrlParser: true,
       useUnifiedTopology: true,
     },

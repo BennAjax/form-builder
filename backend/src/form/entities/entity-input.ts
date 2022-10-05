@@ -1,17 +1,19 @@
-import { ObjectId } from 'mongoose';
+import { Answer } from './form-response';
 
 export interface CreateFormInput {
   name: string;
   slug: string;
+  userId: string;
 }
 
 export interface CreateQuestionInput {
-  formId: ObjectId;
+  formId: string;
   caption: string;
-  answerType: ObjectId;
+  answerType: string;
   options: Array<string>;
 }
 
-export interface CreateAnswerTypeInput {
-  name: string;
+export interface CreateFormResponseInput {
+  formId: string;
+  answers: Array<Answer>;
 }

@@ -1,18 +1,20 @@
-import { CreateFormInput, CreateQuestionInput, CreateAnswerTypeInput } from './entity-input';
-import { AnswerTypeDTO, FormDTO } from './entity-dto';
+import { CreateFormInput, CreateQuestionInput, CreateFormResponseInput } from './entity-input';
+import { FormDTO, UserFormDTO } from './entity-dto';
 
-export interface FormDao {
+export interface FormDAO {
   createForm(form: CreateFormInput): Promise<FormDTO>;
 
-  findFormByParams(query: Record<string, unknown>): Promise<FormDTO | null>;
+  findFormsByParams(query: Record<string, unknown>): Promise<FormDTO[]>;
+
+  findFormBySlug(slug: string): Promise<any>;
+
+  findFormsByUser(userId: string): Promise<any>;
 }
 
-export interface QuestionDao {
+export interface QuestionDAO {
   createQuestion(question: CreateQuestionInput[]): Promise<void>;
 }
 
-export interface AnswerTypeDao {
-  createAnswerType(answerType: CreateAnswerTypeInput): Promise<void>;
-
-  findAll(): Promise<AnswerTypeDTO | null>;
+export interface FormResponseDAO {
+  createFormResponse(formResponse: CreateFormResponseInput): Promise<void>;
 }

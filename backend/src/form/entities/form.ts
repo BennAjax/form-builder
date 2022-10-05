@@ -1,7 +1,7 @@
-import { User } from '../../user/entities/User';
+import { User } from '../../user/entities/user';
 
 export interface Form {
   name: string;
   slug: string;
-  user: User;
+  userId: User;
 }

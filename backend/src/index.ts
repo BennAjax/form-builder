@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express, { Request, Response, NextFunction } from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import config from './config/default';
 import router from './routes';
 import APIError from './lib/errors/api-error';
@@ -15,6 +16,7 @@ if (process.env.NODE_ENV !== 'TEST') {
     .catch(err => console.log('Could not connect to MongoDb', err));
 }
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
