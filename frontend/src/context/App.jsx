@@ -1,16 +1,14 @@
-import React, { createContext } from 'react'
-import { BrowserRouter } from 'react-router-dom';
+import React, { createContext } from "react";
+import { BrowserRouter } from "react-router-dom";
 
 export const App = createContext();
 
-const AppProvider = ({children}) => {
+const AppProvider = ({ children }) => {
   return (
-      <App.Provider value={{}}>
-          <BrowserRouter>
-            {children}
-          </BrowserRouter>
-      </App.Provider>
-  )
-}
+    <App.Provider value={{}}>
+      <BrowserRouter>{children}</BrowserRouter>
+    </App.Provider>
+  );
+};
 
-export default AppProvider
+export default AppProvider;

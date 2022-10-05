@@ -18,6 +18,12 @@ code {
     monospace;
 }
 
+.modal .backdrop {
+  background: rgb(49 46 129 / 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
 @font-face {
   font-family: "Eina";
   src: url("../fonts/eina01-regular-webfont.57ac5b4b.woff2")
