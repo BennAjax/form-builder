@@ -19,6 +19,7 @@ Due to the short time frame of the task, i wasnt able to write a complete test o
 
 ### Technology stack
 ## Frontend
+- React
 - Create React App
 - Tailwind CSS
 - React Router
